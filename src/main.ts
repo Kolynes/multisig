@@ -3,7 +3,6 @@ import vuetify from './plugins/vuetify'
 import App from './App.vue'
 import ExtensionNotFound from "./ExtensionNotFound.vue";
 import router from './router'
-import store from './store'
 import { Extension, Wallet } from "@terra-money/terra.js"
 
 const extension = new Extension();
@@ -13,7 +12,6 @@ if(extension.isAvailable) {
   extension.on("onConnect", (w: Wallet) =>  {
     console.log("connected: ", w);
     new Vue({
-      store,
       router,
       vuetify,
       render: h => h(App),
@@ -21,7 +19,6 @@ if(extension.isAvailable) {
   })
 }
 else new Vue({
-  store,
   router,
   vuetify,
   render: h => h(ExtensionNotFound),

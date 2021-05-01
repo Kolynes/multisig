@@ -39,11 +39,11 @@
         </v-card-title>
         <v-card-text>
           <v-form ref="createContractForm" @submit.prevent="createContract">
-            <v-text-field model="owner1" label="Owner 1" outlined prepend-inner-icon="mdi-account-outline"/>
-            <v-text-field model="owner2" label="Owner 2" outlined prepend-inner-icon="mdi-account-outline"/>
-            <v-text-field model="owner3" label="Owner 3" outlined prepend-inner-icon="mdi-account-outline"/>
-            <v-text-field type="number" model="minimumVotes" label="Number Of Minimum Votes" outlined prepend-inner-icon="mdi-comment-processing-outline"/>
-            <v-btn class="primary" type="submit">
+            <v-text-field v-model="owner1" label="Owner 1" outlined prepend-inner-icon="mdi-account-outline"/>
+            <v-text-field v-model="owner2" label="Owner 2" outlined prepend-inner-icon="mdi-account-outline"/>
+            <v-text-field v-model="owner3" label="Owner 3" outlined prepend-inner-icon="mdi-account-outline"/>
+            <v-text-field type="number" v-model="minimumVotes" label="Number Of Minimum Votes" outlined prepend-inner-icon="mdi-comment-processing-outline"/>
+            <v-btn class="primary" type="submit" icon :loading="creatingContract">
               <v-icon color="white">mdi-arrow-right</v-icon>
             </v-btn>
           </v-form>
