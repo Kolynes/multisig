@@ -1,0 +1,10 @@
+// this is needed in order to know what proposals
+// a user can vote on. no need to check if user is a voter
+// a user can execute
+//
+{"list_proposals":{"limit":10}}
+// what would be returned is an array of a object with this format
+// {"id":"proposal_id", "title":"proposal_title", description: 'String', "msgs": ['message list'], "expires": "expiration_time", "status": "status"}
+
+// to know what proposal can be voted on filter on the js side for proposals with status "open"
+// to know what proposal can be executed  filter on the js side for proposals with status "passed"
