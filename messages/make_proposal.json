@@ -1,0 +1,7 @@
+{"propose":
+  { "description":"description",
+    "msgs":[{"bank": {"send": {"from_address": "contract_address", "to_address": "recipient_address", "amount": [{"amount": "50", "denom": "uusd"}]}}}],
+    "title":"title_of_proposal"
+  }
+}
+// uusd is micro usd (1*10^-6 usd).. so before submitting to blockchain multiply users input used by 10^6
