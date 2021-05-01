@@ -1,0 +1,28 @@
+// Message I used to init the contract on my end
+//const instantiate = new MsgInstantiateContract(
+//wallet.key.accAddress,
+//3191, // code ID
+//{
+//required_weight:2,
+//voters:[
+//{addr:wallet.key.accAddress, weight:1},
+//{addr:process.env.ADDRESS2, weight:1},
+//{addr:process.env.ADDRESS3, weight:1}
+//],
+//max_voting_period:{time:604800}
+//}, // InitMsg
+//{ uluna: 10000000, uusd: 1000000 }, // init coins //these is optional //infact dont put it
+//false
+//);
+
+
+
+{
+"required_weight":2,
+"voters":[
+{"addr":"address1", "weight":1},//weight is 1 for our usecase
+{"addr":"address2", "weight":1},// address2 is a terra address
+{"addr":"address3", "weight":1}
+],
+"max_voting_period":{"time":604800} //time is time in seconds ie 604800 is 1 week
+}
